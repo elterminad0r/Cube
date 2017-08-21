@@ -1,0 +1,16 @@
+-------------------------
+        U0 U1 U2                 F8 = F
+        U7 U8 U3                 B8 = B
+        U6 U5 U4                 U8 = U
+                              D8 = D
+ L0 L1 L2  F0 F1 F2  R0 R1 R2          L8 = L
+ L7 L8 L3  F7 F8 F3  R7 R8 R3          R8 = R
+ L6 L5 L4  F6 F5 F4  R6 R5 R4
+ 
+        D0 D1 D2
+        D7 D8 D3
+        D6 D5 D4
+        
+        B0 B1 B2
+        B7 B8 B3
+        B6 B5 B4
