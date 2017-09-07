@@ -1,12 +1,14 @@
 # Cube
 My project expressing a Rubik's cube as a list of integers representing colours, and moves on the cube as permutations on the list. Uses some operator overloading for some pretty expressive syntax to build up the set of moves on the cube. The object model allows chaining and merging of permutations, allowing you to build up to something like this:
 
-    #turn the front face of the cube
-    turn_front = (turn_face(F)
-                + circular_chain([(U, [6, 5, 4]),
-                                  (R, [0, 7, 6]),
-                                  (D, [2, 1, 0]),
-                                  (L, [4, 3, 2])]))
+```Python
+#turn the front face of the cube
+turn_front = (turn_face(F)
+            + circular_chain([(U, [6, 5, 4]),
+                              (R, [0, 7, 6]),
+                              (D, [2, 1, 0]),
+                              (L, [4, 3, 2])]))
+```
 
 There are many such samples in `cube.py`. Note that no speed is lost in the abstraction - the abstracted computation is done at the start and then de-abstracted into pure permutations (lists/arrays of integers). `playground.py` allows you to do things like this:
 
