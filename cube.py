@@ -213,7 +213,7 @@ FINALMAPPINGS = dict(itertools.chain(FINALMOVES.items(), _inverse_moves.items(),
 # dump calculated tranformations for your viewing pleasure
 def main():
     for n, i in FINALMAPPINGS.items():
-        print("{}: {}".format(n, i))
+        print("{}: {}".format(n, i.short_str()))
 
 if __name__ == "__main__":
     main()
