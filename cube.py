@@ -1,12 +1,12 @@
-import sys
-import re
-import argparse
-import itertools
-
 """
 Program defining a rubik's cube and a number of transformations through a
 series of abstractions on it
 """
+
+import sys
+import re
+import argparse
+import itertools
 
 DEFAULT_CUBE = sum(([i for _ in range(8)] for i in range(6)), []) + list(range(6))
 
@@ -199,12 +199,12 @@ FINALMOVES_AS_INT = [_finalmoves_as_int[i] for i in range(6)]
 FINALMOVES = {NUM_TO_FACE[a]: b for a, b in enumerate(FINALMOVES_AS_INT)}
 
 # the set of final turns as Mappings
-FINALTURNS = {"TURN UP": turn_up,
-              "TURN DOWN": turn_down,
-              "TURN RIGHT": turn_right,
-              "TURN LEFT": turn_left,
-              "TURN CW": turn_cube,
-              "TURN ACW": -turn_cube}
+FINALTURNS = {"X": turn_up,
+              "X'": turn_down,
+              "Y'": turn_right,
+              "Y": turn_left,
+              "Z": turn_cube,
+              "Z'": -turn_cube}
 
 _inverse_moves = {"{}'".format(a): -b for a, b in FINALMOVES.items()}
 
